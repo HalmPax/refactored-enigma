@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 
+
+
 public float speed;
 
 public bool vertical;
@@ -37,6 +39,8 @@ Animator animator;
     {
         if (!broken)
         {
+            animator = GetComponent<Animator>();
+            animator.enabled = false;
             return;
         }
 
