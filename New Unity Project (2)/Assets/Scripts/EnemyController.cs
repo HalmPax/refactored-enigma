@@ -10,6 +10,9 @@ public float speed;
 public bool vertical;
 public float changeTime = 3.0f;
 
+    bool broken = true;
+
+
 Rigidbody2D rigidbody2d;
 
 float timer;
@@ -32,6 +35,10 @@ Animator animator;
     // Update is called once per frame
     void Update()
     {
+        if (!broken)
+        {
+            return;
+        }
 
     timer -= Time.deltaTime;
 
@@ -75,5 +82,12 @@ void OnCollisionEnter2D(Collision2D other)
      player.ChangeHealth(-1);
 	}
 }
+
+    public void Fix()
+    {
+        broken = false;
+        rigidbody2d.simulated = false;
+    }
+
 
 }

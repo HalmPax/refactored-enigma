@@ -12,8 +12,8 @@ RubyController controller = other.GetComponent<RubyController>();
 
 if (controller != null)
 {
-    controller.ChangeHealth(-1);
-    
-}
+		controller.ChangeHealth(-1);
+
+		}
 }
 }
