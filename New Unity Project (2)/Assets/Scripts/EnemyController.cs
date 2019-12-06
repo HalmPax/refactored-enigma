@@ -39,9 +39,8 @@ Animator animator;
     {
         if (!broken)
         {
-            // Stop Animation when fixed:
-            // animator = GetComponent<Animator>();
-            // animator.enabled = false;
+            animator = GetComponent<Animator>();
+            animator.enabled = false;
             return;
         }
 
@@ -92,7 +91,6 @@ void OnCollisionEnter2D(Collision2D other)
     {
         broken = false;
         rigidbody2d.simulated = false;
-        animator.SetTrigger("Fixed");
     }
 
 

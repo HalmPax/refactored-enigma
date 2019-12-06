@@ -8,14 +8,6 @@ public class Projectile : MonoBehaviour
     
     Rigidbody2D rigidbody2d;
 
-    void Update()
-    {
-        if (transform.position.magnitude > 1000.0f)
-        {
-            Destroy(gameObject);
-         }
-    }
-
     void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
